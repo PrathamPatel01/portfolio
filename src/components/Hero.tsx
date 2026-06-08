@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 
 const TITLES = [
   "Machine Learning Engineer",
-  "LLM Integration Specialist",
-  "Data Analyst",
-  "AI Builder",
+  "Data Analytics",
+  "AI Engineering",
+  "Software Developer",
   "AI Enthusiast",
 ];
 
@@ -174,7 +174,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 text-accent text-sm font-medium px-4 py-2 rounded-full mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          Open to ML &amp; AI Roles
+          Open to ML, DA &amp; AI Roles
         </motion.div>
 
         <motion.h1
@@ -231,7 +231,7 @@ export function Hero() {
           >
             <a href="#projects">View My Work</a>
           </Button>
-          <Button
+          {/* <Button
             asChild
             variant="outline"
             size="lg"
@@ -239,7 +239,7 @@ export function Hero() {
             data-testid="btn-download-resume"
           >
             <a href="#">Download Resume</a>
-          </Button>
+          </Button> */}
         </motion.div>
 
         {/* Tech stack mini-row */}

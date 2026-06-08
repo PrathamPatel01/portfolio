@@ -20,7 +20,6 @@ function App() {
         <Hero />
         <About />
         <Projects />
-        <LLMDemo />
         <Skills />
         <Contact />
       </main>

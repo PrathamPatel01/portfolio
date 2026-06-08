@@ -83,7 +83,7 @@ export function Contact() {
           <a href="https://github.com/PrathamPatel01" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-white hover:scale-110 transition-all" data-testid="social-github">
             <FaGithub className="text-3xl" />
           </a>
-          <a href="#" className="text-muted-foreground hover:text-[#0A66C2] hover:scale-110 transition-all" data-testid="social-linkedin">
+          <a href="https://www.linkedin.com/in/pratham-kumar-patel-292541245" className="text-muted-foreground hover:text-[#0A66C2] hover:scale-110 transition-all" data-testid="social-linkedin">
             <FaLinkedin className="text-3xl" />
           </a>
           <a href="#" className="text-muted-foreground hover:text-white hover:scale-110 transition-all" data-testid="social-twitter">

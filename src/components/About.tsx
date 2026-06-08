@@ -121,7 +121,7 @@ export function About() {
           <motion.div style={{ x: rightXSpring, opacity }} className="w-full lg:w-3/5">
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed mb-8">
               <p>
-                I'm <span className="text-white font-medium">Pratham Patel</span>, a Machine Learning and Data Analytics student passionate about building intelligent systems that learn from data. I work with real-world datasets to uncover patterns, build predictive models, and turn insights into measurable impact.
+                I'm <span className="text-white font-medium">Pratham Kumar Patel</span>, a Machine Learning and Data Analytics student passionate about building intelligent systems that learn from data. I work with real-world datasets to uncover patterns, build predictive models, and turn insights into measurable impact.
               </p>
               <p>
                 Whether it's training neural networks, integrating <span className="text-accent">large language models</span> into production pipelines, crafting interactive dashboards, or running deep exploratory analysis — I'm in my element when data tells a story.

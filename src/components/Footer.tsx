@@ -14,7 +14,7 @@ export function Footer() {
           <a href="https://github.com/PrathamPatel01" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-white transition-colors">
             <FaGithub className="text-xl" />
           </a>
-          <a href="#" className="text-muted-foreground hover:text-[#0A66C2] transition-colors">
+          <a href="https://www.linkedin.com/in/pratham-kumar-patel-292541245" className="text-muted-foreground hover:text-[#0A66C2] transition-colors">
             <FaLinkedin className="text-xl" />
           </a>
           <a href="#" className="text-muted-foreground hover:text-white transition-colors">

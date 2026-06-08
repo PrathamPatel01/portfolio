@@ -21,7 +21,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const links = ['Home', 'About', 'Projects', 'Demo', 'Skills', 'Contact'];
+  const links = ['Home', 'About', 'Projects', 'Skills', 'Contact'];
 
   return (
     <motion.nav
