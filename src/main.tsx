@@ -3,3 +3,12 @@ import App from "./App";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(<App />);
+
+
+import { BrowserRouter } from "react-router-dom";
+
+createRoot(document.getElementById("root")!).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);

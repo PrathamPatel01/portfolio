@@ -7,25 +7,52 @@ import { LLMDemo } from "./components/LLMDemo";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import UnderConstruction from "./components/UnderConstruction";
 
 function App() {
   useEffect(() => {
     document.documentElement.classList.add('dark');
   }, []);
 
+  // return (
+  //   <div className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white font-sans">
+  //     <Navbar />
+  //     <main>
+  //       <Hero />
+  //       <About />
+  //       <Projects />
+  //       <Skills />
+  //       <Contact />
+  //     </main>
+  //     <Footer />
+  //   </div>
+  // );
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white font-sans">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
+  <Routes>
+    <Route
+      path="/"
+      element={
+        <div className="min-h-screen bg-background text-foreground">
+          <Navbar />
+          <main>
+            <Hero />
+            <About />
+            <Projects />
+            <Skills />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      }
+    />
+
+    <Route
+      path="/under-construction"
+      element={<UnderConstruction />}
+    />
+  </Routes>
+);
 }
 
 export default App;

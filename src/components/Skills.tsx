@@ -3,12 +3,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const skillGroups = [
   {
-    title: "Languages & Libraries",
+    title: "Languages",
     color: "from-blue-500/20 to-cyan-500/20",
     border: "border-blue-500/20",
     dot: "bg-blue-400",
     hover: "hover:border-blue-400/50 hover:text-blue-300",
-    skills: ["Python", "R", "SQL", "NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn", "TensorFlow", "PyTorch"],
+    skills: ["Python", "SQL","JavaScript"],
   },
   {
     title: "Tools & Platforms",
@@ -16,7 +16,7 @@ const skillGroups = [
     border: "border-violet-500/20",
     dot: "bg-violet-400",
     hover: "hover:border-violet-400/50 hover:text-violet-300",
-    skills: ["Jupyter", "Google Colab", "VS Code", "Git", "GitHub", "Tableau", "Power BI", "FastAPI", "Docker"],
+    skills: ["Jupyter", "Google Colab", "VS Code", "Git", "GitHub","FastAPI", "Docker","Redis","MongoDB","PostgresSQL"],
   },
   {
     title: "Core Concepts",
@@ -24,10 +24,66 @@ const skillGroups = [
     border: "border-cyan-500/20",
     dot: "bg-cyan-400",
     hover: "hover:border-cyan-400/50 hover:text-cyan-300",
-    skills: ["Machine Learning", "Deep Learning", "NLP", "LLM Integration", "RAG Pipelines", "Data Wrangling", "EDA", "Feature Engineering", "Statistical Analysis"],
+    skills: ["Machine Learning","RAG Pipelines", "EDA", "Feature Engineering", "Statistical Analysis"],
   },
 ];
 
+// const skillGroups = [
+//   {
+//     title: "Programming",
+//     color: "from-blue-500/20 to-cyan-500/20",
+//     border: "border-blue-500/20",
+//     dot: "bg-blue-400",
+//     hover: "hover:border-blue-400/50 hover:text-blue-300",
+//     skills: ["Python", "JavaScript", "TypeScript", "SQL"],
+//   },
+//   {
+//     title: "Machine Learning & AI",
+//     color: "from-violet-500/20 to-purple-500/20",
+//     border: "border-violet-500/20",
+//     dot: "bg-violet-400",
+//     hover: "hover:border-violet-400/50 hover:text-violet-300",
+//     skills: [
+//       "Scikit-learn",
+//       "TensorFlow",
+//       "PyTorch",
+//       "Feature Engineering",
+//       "Model Evaluation",
+//     ],
+//   },
+//   {
+//     title: "Generative AI & LLMs",
+//     color: "from-cyan-500/20 to-teal-500/20",
+//     border: "border-cyan-500/20",
+//     dot: "bg-cyan-400",
+//     hover: "hover:border-cyan-400/50 hover:text-cyan-300",
+//     skills: ["RAG Pipelines", "LangChain", "Ollama"],
+//   },
+//   {
+//     title: "Data & Analytics",
+//     color: "from-emerald-500/20 to-green-500/20",
+//     border: "border-emerald-500/20",
+//     dot: "bg-emerald-400",
+//     hover: "hover:border-emerald-400/50 hover:text-emerald-300",
+//     skills: ["Pandas", "NumPy", "EDA", "Statistical Analysis"],
+//   },
+//   {
+//     title: "Data Engineering & Databases",
+//     color: "from-orange-500/20 to-amber-500/20",
+//     border: "border-orange-500/20",
+//     dot: "bg-orange-400",
+//     hover: "hover:border-orange-400/50 hover:text-orange-300",
+//     skills: ["Data Pipelines", "MySQL", "MongoDB", "PySpark (basic)"],
+//   },
+//   {
+//     title: "Tools & Platforms",
+//     color: "from-pink-500/20 to-rose-500/20",
+//     border: "border-pink-500/20",
+//     dot: "bg-pink-400",
+//     hover: "hover:border-pink-400/50 hover:text-pink-300",
+//     skills: ["Git", "Docker", "Streamlit", "FastAPI", "VS Code"],
+//   },
+// ];
 export function Skills() {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
