@@ -102,23 +102,23 @@ export function Hero() {
       {/* ── PARALLAX LAYER 3: floating orbs (different speeds) ── */}
       <motion.div
         style={{ y: orb1Y }}
-        className="absolute top-[-120px] left-[-80px] w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[100px] pointer-events-none z-0"
+        className="absolute top-[-120px] left-[-80px] w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[50px] pointer-events-none z-0"
       />
       <motion.div
         style={{ y: orb2Y }}
-        className="absolute top-[10%] right-[-100px] w-[380px] h-[380px] rounded-full bg-violet-500/10 blur-[90px] pointer-events-none z-0"
+        className="absolute top-[10%] right-[-100px] w-[380px] h-[380px] rounded-full bg-violet-500/10 blur-[40px] pointer-events-none z-0"
       />
       <motion.div
         style={{ y: orb3Y }}
-        className="absolute top-[30%] left-[15%] w-[280px] h-[280px] rounded-full bg-cyan-500/8 blur-[80px] pointer-events-none z-0"
+        className="absolute top-[30%] left-[15%] w-[280px] h-[280px] rounded-full bg-cyan-500/8 blur-[35px] pointer-events-none z-0"
       />
       <motion.div
         style={{ y: orb4Y }}
-        className="absolute bottom-[5%] right-[20%] w-[320px] h-[320px] rounded-full bg-indigo-600/10 blur-[90px] pointer-events-none z-0"
+        className="absolute bottom-[5%] right-[20%] w-[320px] h-[320px] rounded-full bg-indigo-600/10 blur-[40px] pointer-events-none z-0"
       />
       <motion.div
         style={{ y: orb5Y }}
-        className="absolute bottom-[-80px] left-[30%] w-[440px] h-[440px] rounded-full bg-blue-600/8 blur-[120px] pointer-events-none z-0"
+        className="absolute bottom-[-80px] left-[30%] w-[440px] h-[440px] rounded-full bg-blue-600/8 blur-[50px] pointer-events-none z-0"
       />
 
       {/* ── PARALLAX LAYER 4: tsParticles ── */}
@@ -129,19 +129,19 @@ export function Hero() {
             className="w-full h-full opacity-50"
             options={{
               background: { color: { value: "transparent" } },
-              fpsLimit: 120,
+              fpsLimit: 30,
               particles: {
                 color: { value: ["#4F8EF7", "#7C3AED", "#06b6d4"] },
                 links: {
                   color: "#4F8EF7",
-                  distance: 140,
+                  distance: 100,
                   enable: true,
                   opacity: 0.25,
                   width: 1,
                 },
                 move: {
                   enable: true,
-                  speed: 0.8,
+                  speed: 0.4,
                   direction: "none",
                   random: true,
                   straight: false,
@@ -149,13 +149,13 @@ export function Hero() {
                 },
                 number: {
                   density: { enable: true, width: 900 },
-                  value: 70,
+                  value: window.innerWidth < 768 ? 20 : 45,
                 },
                 opacity: { value: { min: 0.3, max: 0.7 }, animation: { enable: true, speed: 0.5 } },
                 shape: { type: "circle" },
                 size: { value: { min: 1, max: 2.5 } },
               },
-              detectRetina: true,
+              detectRetina: false,
             }}
           />
         </motion.div>

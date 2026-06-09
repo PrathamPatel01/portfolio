@@ -2,32 +2,64 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { SiPython, SiTensorflow, SiPytorch, SiPandas, SiGithub, SiScikitlearn, SiOpenai } from "react-icons/si";
 
-function Counter({ end, label, suffix = "+" }: { end: number; label: string; suffix?: string }) {
+function Counter({
+  end,
+  label,
+  suffix = "+"
+}: {
+  end: number;
+  label: string;
+  suffix?: string;
+}) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const startedRef = useRef(false);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
 
   useEffect(() => {
     const unsub = scrollYProgress.on("change", (v) => {
-      if (v > 0.1 && count === 0) {
+      if (v > 0.1 && !startedRef.current) {
+        startedRef.current = true;
+
         let start = 0;
         const duration = 1800;
         const increment = end / (duration / 16);
+
         const timer = setInterval(() => {
           start += increment;
-          if (start >= end) { setCount(end); clearInterval(timer); }
-          else setCount(Math.floor(start));
+
+          if (start >= end) {
+            setCount(end);
+            clearInterval(timer);
+          } else {
+            setCount(Math.floor(start));
+          }
         }, 16);
       }
     });
+
     return unsub;
-  }, [scrollYProgress, end, count]);
+  }, [scrollYProgress, end]);
 
   return (
-    <div ref={ref} className="relative text-center p-6 bg-[#0d1117] rounded-2xl border border-white/5 shadow-lg overflow-hidden group hover:border-accent/30 transition-colors duration-300">
+    <div
+      ref={ref}
+      className="relative text-center p-6 bg-[#0d1117] rounded-2xl border border-white/5 shadow-lg overflow-hidden group hover:border-accent/30 transition-colors duration-300"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#4F8EF7] to-[#7C6FF7] mb-2 relative z-10">{count}{suffix}</div>
-      <div className="text-xs text-muted-foreground uppercase tracking-widest relative z-10">{label}</div>
+
+      <div className="text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#4F8EF7] to-[#7C6FF7] mb-2 relative z-10">
+        {count}
+        {suffix}
+      </div>
+
+      <div className="text-xs text-muted-foreground uppercase tracking-widest relative z-10">
+        {label}
+      </div>
     </div>
   );
 }

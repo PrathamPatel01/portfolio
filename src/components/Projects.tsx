@@ -92,8 +92,8 @@ export function Projects() {
   return (
     <section id="projects" ref={sectionRef} className="relative py-32 bg-[#090e18] overflow-hidden">
       {/* Parallax blobs */}
-      <motion.div style={{ y: blob1Y }} className="absolute top-20 -right-40 w-[500px] h-[500px] rounded-full bg-blue-500/6 blur-[130px] pointer-events-none" />
-      <motion.div style={{ y: blob2Y }} className="absolute bottom-20 -left-40 w-[500px] h-[500px] rounded-full bg-violet-500/6 blur-[130px] pointer-events-none" />
+      <motion.div style={{ y: blob1Y }} className="absolute top-20 -right-40 w-[500px] h-[500px] rounded-full bg-blue-500/6 blur-[70px] pointer-events-none" />
+      <motion.div style={{ y: blob2Y }} className="absolute bottom-20 -left-40 w-[500px] h-[500px] rounded-full bg-violet-500/6 blur-[70px] pointer-events-none" />
 
       {/* Subtle dots pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{
