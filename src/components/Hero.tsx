@@ -121,7 +121,7 @@ export function Hero() {
         className="absolute bottom-[-80px] left-[30%] w-[440px] h-[440px] rounded-full bg-blue-600/8 blur-[50px] pointer-events-none z-0"
       />
 
-      {/* ── PARALLAX LAYER 4: tsParticles ── */}
+      {/* ── PARALLAX LAYER 4: tsParticles ──
       {init && (
         <motion.div style={{ y: particleY }} className="absolute inset-0 z-[1] pointer-events-none">
           <Particles
@@ -159,7 +159,7 @@ export function Hero() {
             }}
           />
         </motion.div>
-      )}
+      )} */}
 
       {/* ── PARALLAX LAYER 5: main content (slowest) ── */}
       <motion.div
@@ -269,3 +269,4 @@ export function Hero() {
     </section>
   );
 }
+

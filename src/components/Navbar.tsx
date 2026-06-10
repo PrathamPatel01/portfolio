@@ -7,16 +7,35 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    // const handleScroll = () => {
+    //   setScrolled(window.scrollY > 50);
+    //   const sections = ['home', 'about', 'projects', 'demo', 'skills', 'contact'];
+    //   let current = 'home';
+    //   for (const section of sections) {
+    //     const el = document.getElementById(section);
+    //     if (el && window.scrollY >= el.offsetTop - 160) current = section;
+    //   }
+    //   setActive(current);
+    // };
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-      const sections = ['home', 'about', 'projects', 'demo', 'skills', 'contact'];
-      let current = 'home';
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el && window.scrollY >= el.offsetTop - 160) current = section;
+    const shouldBeScrolled = window.scrollY > 50;
+
+    setScrolled(prev =>
+      prev !== shouldBeScrolled ? shouldBeScrolled : prev
+    );
+
+    const sections = ['home', 'about', 'projects', 'skills', 'contact'];
+    let current = 'home';
+
+    for (const section of sections) {
+      const el = document.getElementById(section);
+      if (el && window.scrollY >= el.offsetTop - 160) {
+        current = section;
       }
-      setActive(current);
-    };
+    }
+
+    setActive(prev => prev !== current ? current : prev);
+  };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
