@@ -122,44 +122,44 @@ export function Hero() {
       />
 
       {/* ── PARALLAX LAYER 4: tsParticles ──
-      {init && (
-        <motion.div style={{ y: particleY }} className="absolute inset-0 z-[1] pointer-events-none">
-          <Particles
-            id="tsparticles"
-            className="w-full h-full opacity-50"
-            options={{
-              background: { color: { value: "transparent" } },
-              fpsLimit: 30,
-              particles: {
-                color: { value: ["#4F8EF7", "#7C3AED", "#06b6d4"] },
-                links: {
-                  color: "#4F8EF7",
-                  distance: 100,
-                  enable: true,
-                  opacity: 0.25,
-                  width: 1,
-                },
-                move: {
-                  enable: true,
-                  speed: 0.4,
-                  direction: "none",
-                  random: true,
-                  straight: false,
-                  outModes: "bounce",
-                },
-                number: {
-                  density: { enable: true, width: 900 },
-                  value: window.innerWidth < 768 ? 20 : 45,
-                },
-                opacity: { value: { min: 0.3, max: 0.7 }, animation: { enable: true, speed: 0.5 } },
-                shape: { type: "circle" },
-                size: { value: { min: 1, max: 2.5 } },
-              },
-              detectRetina: false,
-            }}
-          />
-        </motion.div>
-      )} */}
+      // {init && (
+      //   <motion.div style={{ y: particleY }} className="absolute inset-0 z-[1] pointer-events-none">
+      //     <Particles
+      //       id="tsparticles"
+      //       className="w-full h-full opacity-50"
+      //       options={{
+      //         background: { color: { value: "transparent" } },
+      //         fpsLimit: 30,
+      //         particles: {
+      //           color: { value: ["#4F8EF7", "#7C3AED", "#06b6d4"] },
+      //           links: {
+      //             color: "#4F8EF7",
+      //             distance: 100,
+      //             enable: true,
+      //             opacity: 0.25,
+      //             width: 1,
+      //           },
+      //           move: {
+      //             enable: true,
+      //             speed: 0.4,
+      //             direction: "none",
+      //             random: true,
+      //             straight: false,
+      //             outModes: "bounce",
+      //           },
+      //           number: {
+      //             density: { enable: true, width: 900 },
+      //             value: window.innerWidth < 768 ? 20 : 45,
+      //           },
+      //           opacity: { value: { min: 0.3, max: 0.7 }, animation: { enable: true, speed: 0.5 } },
+      //           shape: { type: "circle" },
+      //           size: { value: { min: 1, max: 2.5 } },
+      //         },
+      //         detectRetina: false,
+      //       }}
+      //     />
+      //   </motion.div>
+      // )} */}
 
       {/* ── PARALLAX LAYER 5: main content (slowest) ── */}
       <motion.div
