@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SiGithub } from "react-icons/si";
-import { FaExternalLinkAlt, FaBrain, FaChartLine, FaComments, FaEye, FaVirus, FaStar } from "react-icons/fa";
+import { FaExternalLinkAlt, FaBrain, FaChartLine, FaComments, FaEye, FaVirus, FaStar, FaLeaf } from "react-icons/fa";
 
 const projects = [
   {
@@ -23,11 +23,23 @@ const projects = [
       "Local-first RAG application for analyzing and comparing PDFs using semantic search, vector embeddings, and Llama 3.2. Supports document Q&A, summarization, timeline extraction, and intelligent document comparison.",
     tags: ["Python", "RAG", "ChromaDB", "Llama 3.2"],
     gradient: "from-[#0f4a3e] via-[#0a2e28] to-[#0d1117]",
-    accent: "#10b981",
+    accent: "#06b6d4",
     icon: <FaComments />,
     stat: "200-Page PDFs",
     github: "https://github.com/PrathamPatel01/RagBasedDocumentComparer",
     demo: "/under-construction"
+  },
+   {
+  title: "Plant Disease Intelligence",
+    description:
+      "Deep learning dashboard for plant disease classification using the PlantVillage dataset and MobileNetV2 transfer learning. Includes dataset insights, class imbalance analysis, model performance tracking, and an enterprise-style Streamlit UI.",
+    tags: ["Python", "TensorFlow", "MobileNetV2", "Streamlit"],
+    gradient: "from-[#14532d] via-[#064e3b] to-[#0d1117]",
+    accent: "#10b981",
+    icon: <FaLeaf />,
+    stat: "91.66% Test Accuracy",
+    github: "https://github.com/PrathamPatel01/plant_diseases_project",
+    demo: "YOUR_STREAMLIT_DEPLOYED_LINK"
   },
   {
     title: "Global Cancer Data Analysis & Severity Prediction",
