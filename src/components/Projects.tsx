@@ -39,7 +39,7 @@ const projects = [
     icon: <FaLeaf />,
     stat: "91.66% Test Accuracy",
     github: "https://github.com/PrathamPatel01/plant_diseases_project",
-    demo: "YOUR_STREAMLIT_DEPLOYED_LINK"
+    demo: "https://plantdiseasesproject-pnp.streamlit.app/"
   },
   {
     title: "Global Cancer Data Analysis & Severity Prediction",
